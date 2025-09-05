@@ -1,21 +1,16 @@
 import "../globals.css";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Cairo } from "next/font/google";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import Nav from "@/components/shared/layout/nav";
+import Footer from "@/components/shared/layout/footer";
 
-import enMessages from "@/messages/en.json";
-import arMessages from "@/messages/ar.json";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const cairo = Cairo({
+  subsets: ["latin", "arabic"],
+  variable: "--font-cairo",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -36,15 +31,15 @@ export default async function RootLayout({ children, params }: Props) {
   }
 
   // Pick messages based on locale
-  const messages = locale === "ar" ? arMessages : enMessages;
+  const direction = locale === "ar" ? "rtl" : "ltr";
 
   return (
-    <html lang={locale}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+    <html lang={locale} dir={direction} className="scroll-smooth dark">
+      <body className={`${cairo.variable} antialiased min-h-screen`}>
+        <NextIntlClientProvider locale={locale}>
+          <Nav />
+          <main className="space-y-[80px] lg:space-y-[120px]">{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
