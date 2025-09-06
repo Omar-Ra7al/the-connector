@@ -3,9 +3,7 @@ import Hero from "@/components/pages/home/hero";
 import Metrics from "@/components/pages/home/metrics";
 import Services from "@/components/pages/home/services";
 import AboutSection from "@/components/pages/home/whyConnector";
-import { Map } from "@/components/shared/sections/map";
 import { OurClients } from "@/components/shared/sections/ourClients";
-import { generateSEOMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 
 const IMAGES_ROW_A = [
@@ -42,11 +40,18 @@ export async function generateMetadata({
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
-    ogTitle: t("ogTitle"),
-    ogDescription: t("ogDescription"),
-    twitterTitle: t("twitterTitle"),
-    twitterDescription: t("twitterDescription"),
-    locale: params.locale,
+    openGraph: {
+      title: t("ogTitle"),
+      description: t("ogDescription"),
+      type: "website",
+      images: [{ url: "/img/logo.png", width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("twitterTitle"),
+      description: t("twitterDescription"),
+      images: ["/img/logo.png"],
+    },
   };
 }
 

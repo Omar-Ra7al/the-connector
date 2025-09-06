@@ -23,7 +23,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "SEO.home" });
-  const siteUrl = "https://one-take-iota.vercel.app";
+  const siteUrl = "https://the-connector-three.vercel.app";
 
   return {
     metadataBase: new URL(siteUrl),
