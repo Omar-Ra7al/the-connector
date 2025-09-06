@@ -33,7 +33,7 @@
           "label": "Client Retention Rate"
         },
         {
-          "value": "100K+",
+          "value": "1000+",
           "label": "Hours of Engineering"
         },
         {
@@ -47,13 +47,13 @@
       "services": [
         {
           "title": "Software Engineering",
-          "description": "We build **secure, future-ready digital solutions** that help your business grow. From modern applications to scalable platforms, our engineering expertise ensures technology drives your success.",
-          "ctaText": "Explore Software Engineering"
+          "description": "At The Connector, we build secure, scalable, and future-ready digital solutions. From stunning websites to high-performance mobile apps, cutting-edge cybersecurity, and AI-driven insights, our software services help your business grow and stay ahead of the competition.",
+          "ctaText": "Read More"
         },
         {
-          "title": "Outsourcing",
-          "description": "We connect companies with the **right talent at the right time**. Our outsourcing solutions offer flexibility, reliability, and scalability—empowering businesses to expand without limits.",
-          "ctaText": "Explore Outsourcing"
+          "title": "Staff Augmentation",
+          "description": "Get the right experts at the exact moment your project needs them—no delays, no hassle. Our staff augmentation services give you access to skilled professionals who integrate seamlessly with your team, accelerating your projects without compromising quality or deadlines.",
+          "ctaText": "Read More"
         }
       ]
     },
@@ -306,7 +306,9 @@
   },
   "Common": {
     "visitSite": "Visit Site",
-    "companyName": "The Connector"
+    "companyName": "The Connector",
+    "contactUs": "Contact Us",
+    "ourClients": "Our Clients"
   },
   "SEO": {
     "home": {

@@ -1,7 +1,5 @@
 "use client";
 import MetricCard from "./metriccard";
-import Heading from "@/components/shared/typography/heading";
-import BlurText from "@/components/ui/BlurText";
 import Section from "@/components/shared/layout/section";
 import AnimatedHeading from "@/components/shared/typography/animatedHeading";
 import { useTranslations } from "next-intl";
@@ -10,7 +8,7 @@ export default function Metrics() {
   const t = useTranslations("Home.metrics");
   return (
     <Section
-      type="inner"
+      type="outer"
       className="flex flex-col gap-6 md:gap-12 items-center"
     >
       {/* Section Heading */}

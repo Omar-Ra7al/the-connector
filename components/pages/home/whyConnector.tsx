@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
 export default function AboutSection() {
   const t = useTranslations("Home.whyConnector");
   return (
-    <Section type="inner" className="w-full">
+    <Section type="outer">
       <div id="why-the-connector" className="mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

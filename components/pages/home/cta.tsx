@@ -5,11 +5,12 @@ import Heading from "@/components/shared/typography/heading";
 import { Link } from "@/i18n/navigation";
 import React from "react";
 import { useTranslations } from "next-intl";
+import Section from "@/components/shared/layout/section";
 
 const Cta = () => {
   const t = useTranslations("Home.cta");
   return (
-    <section className="relative text-center text-white">
+    <Section type="outer" className="relative text-center">
       <div className="max-w-3xl mx-auto px-6 space-y-[30px]">
         <AnimatedHeading size="md" level={3} text={t("heading")} />
 
@@ -17,7 +18,7 @@ const Cta = () => {
 
         <ContactUsBtn text={t("buttonText")} />
       </div>
-    </section>
+    </Section>
   );
 };
 

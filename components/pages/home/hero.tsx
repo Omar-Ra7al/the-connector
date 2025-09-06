@@ -34,8 +34,8 @@ export default function Hero() {
       )}
 
       <Section
-        type="inner"
-        className="!z-20 py-[120px] relative w-full min-h-screen flex flex-col items-center justify-center gap-[40px] lg:gap-[60px] lg:!max-w-[70%]"
+        type="outer"
+        className="!z-20 py-[120px] relative min-h-screen flex flex-col items-center justify-center gap-[40px] lg:gap-[60px] lg:!max-w-[70%]"
       >
         <div className="flex flex-col gap-[20px] ">
           {/* Heading & Logo */}
@@ -72,7 +72,7 @@ export default function Hero() {
           </div>
 
           {/* Subtitle */}
-          <FadeIn delay={1.5} duration={1}>
+          <FadeIn delay={1.3} duration={1}>
             <Description
               size="lg"
               className="font-normal text-center max-w-[90%] lg:max-w-[70%] mx-auto"
@@ -84,7 +84,7 @@ export default function Hero() {
 
         {/* Bottom Section */}
         <FadeIn
-          delay={2.5}
+          delay={1.3}
           duration={0.3}
           className="flex flex-col gap-[40px] items-center"
         >
@@ -103,7 +103,7 @@ export default function Hero() {
             glowColor="rgba(255, 255, 0, 0.9)"
           />
 
-          <FadeIn className="flex items-center" delay={2.8} duration={0.5}>
+          <FadeIn className="flex items-center" delay={1.8} duration={0.5}>
             <ContactUsBtn text={t("hero.ctaButton")} />
           </FadeIn>
         </FadeIn>

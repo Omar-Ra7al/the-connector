@@ -1,5 +1,6 @@
 "use client";
 import CardNav from "@/components/ui/CardNav";
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 import { useTranslations } from "next-intl";
 
 const Nav = () => {

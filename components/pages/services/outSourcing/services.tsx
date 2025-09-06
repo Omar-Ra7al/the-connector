@@ -75,7 +75,7 @@ export default function Services() {
             key={index}
             className="flex flex-col justify-between gap-y-[20px] p-6
             rounded-xl bg-primary/10 backdrop-blur-3xl
-            transition-all duration-300 hover:scale-[1.03]"
+            transition-all duration-300 hover:scale-y-[1.03]"
             spotlightColor="rgba(0, 190, 255, 0.15)"
           >
             <BorderBeam

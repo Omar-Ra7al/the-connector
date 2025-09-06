@@ -3,6 +3,7 @@ import Hero from "@/components/pages/home/hero";
 import Metrics from "@/components/pages/home/metrics";
 import Services from "@/components/pages/home/services";
 import AboutSection from "@/components/pages/home/whyConnector";
+import { Map } from "@/components/shared/sections/map";
 import { OurClients } from "@/components/shared/sections/ourClients";
 import { generateSEOMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
@@ -37,7 +38,7 @@ export async function generateMetadata({
     namespace: "SEO.home",
   });
 
-  return generateSEOMetadata({
+  return {
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
@@ -45,11 +46,8 @@ export async function generateMetadata({
     ogDescription: t("ogDescription"),
     twitterTitle: t("twitterTitle"),
     twitterDescription: t("twitterDescription"),
-    canonicalUrl: `https://theconnector.co/${
-      params.locale === "ar" ? "ar" : ""
-    }`,
     locale: params.locale,
-  });
+  };
 }
 
 export default function Home() {
@@ -64,6 +62,8 @@ export default function Home() {
         <AboutSection />
         <Metrics />
         <Services />
+        {/* <Map /> */}
+
         <OurClients rowA={IMAGES_ROW_A} rowB={IMAGES_ROW_B} />
         <Cta />
       </div>

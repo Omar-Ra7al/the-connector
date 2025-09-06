@@ -4,6 +4,9 @@ import { gsap } from "gsap";
 import { GoArrowUpRight } from "react-icons/go";
 import { Link } from "@/i18n/navigation";
 import ContactUsBtn from "../shared/buttons/contactUsBtn";
+import LocaleSwitcher from "../shared/layout/localeSwitcher";
+import { BorderBeam } from "../magicui/border-beam";
+import Image from "next/image";
 
 type CardNavLink = {
   label: string;
@@ -163,13 +166,13 @@ const CardNav: React.FC<CardNavProps> = ({
 
   return (
     <div
-      className={`card-nav-container fixed left-1/2 -translate-x-1/2 w-[90%] max-w-[800px] z-[99] top-[1.2em] md:top-[2em] ${className}`}
+      className={`card-nav-container fixed left-1/2 -translate-x-1/2 w-[90%] md:w-[75%] max-w-[800px] z-[99] top-6 md:top-8  ${className}`}
     >
       <nav
         ref={navRef}
         className={`card-nav ${
           isExpanded ? "open" : ""
-        } block h-[60px] p-0 rounded-xl shadow-md relative overflow-hidden will-change-[height] backdrop-blur-3xl`}
+        } block h-[60px] rounded-xl shadow-md relative overflow-hidden will-change-[height] backdrop-blur-3xl`}
         style={{ backgroundColor: baseColor }}
       >
         <div className="card-nav-top absolute inset-x-0 top-0 h-[60px] flex items-center justify-between p-2 pl-[1.1rem] z-[2]">
@@ -193,13 +196,22 @@ const CardNav: React.FC<CardNavProps> = ({
                 isHamburgerOpen ? "-translate-y-[4px] -rotate-45" : ""
               } group-hover:opacity-75`}
             />
+            {!isHamburgerOpen && (
+              <div
+                className={`hamburger-line w-[30px] h-[2px] bg-current transition-[transform,opacity,margin] duration-300 ease-linear [transform-origin:50%_50%] 
+                 "-translate-y-[4px] -rotate-45"
+                  group-hover:opacity-75`}
+              />
+            )}
           </div>
 
           <Link
             href="/"
             className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none"
           >
-            <img
+            <Image
+              width={100}
+              height={100}
               src={logo}
               alt={logoAlt}
               className="logo h-full w-[40px] lg:w-[60px]"
@@ -250,6 +262,9 @@ const CardNav: React.FC<CardNavProps> = ({
               </div>
             </div>
           ))}
+          <div className="md:hidden w-full">
+            <LocaleSwitcher />
+          </div>
         </div>
       </nav>
     </div>

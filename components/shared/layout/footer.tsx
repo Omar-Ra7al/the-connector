@@ -109,7 +109,6 @@ const Footer = () => {
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: 0.2 + i * 0.1 }}
-                  whileHover={{ scale: 1.05, color: "#0ff" }}
                 >
                   <a href={href}>{label}</a>
                 </motion.li>
@@ -164,7 +163,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <motion.div
-          className="mt-12 text-center text-sm text-muted-foreground border-t border-secondary/50 pt-6"
+          className="mt-12 text-center text-sm text-muted-foreground"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

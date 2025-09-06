@@ -15,7 +15,7 @@ export async function generateMetadata({
     namespace: "SEO.software",
   });
 
-  return generateSEOMetadata({
+  return {
     title: t("title"),
     description: t("description"),
     keywords: t("keywords"),
@@ -23,11 +23,9 @@ export async function generateMetadata({
     ogDescription: t("ogDescription"),
     twitterTitle: t("twitterTitle"),
     twitterDescription: t("twitterDescription"),
-    canonicalUrl: `https://theconnector.co/${
-      params.locale === "ar" ? "ar" : ""
-    }/services/software`,
+
     locale: params.locale,
-  });
+  };
 }
 
 const page = () => {

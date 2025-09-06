@@ -88,6 +88,7 @@ const Hero = () => {
             verticalDistance={60}
             delay={3000}
             pauseOnHover
+            skewAmount={0}
           >
             {CARDS.map(({ src, alt, href }, idx) => (
               <Card

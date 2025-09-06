@@ -4,9 +4,10 @@ import {
   ScrollVelocityRow,
 } from "@/components/magicui/scroll-based-velocity";
 import AnimatedHeading from "@/components/shared/typography/animatedHeading";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const ITMS_SPEED = 8;
-
 // ✅ Types
 type ImageRowProps = {
   images: string[];
@@ -30,21 +31,21 @@ const ImageRow: React.FC<ImageRowProps> = ({
     md: "h-[60px] w-[105px] md:h-[90px] md:w-[160px] lg:h-[120px] lg:w-[200px]",
     lg: "h-[90px] w-[160px] md:h-[120px] md:w-[200px] lg:h-[150px] lg:w-[240px]",
   };
-
   return (
     <ScrollVelocityRow
       baseVelocity={ITMS_SPEED}
       direction={direction}
       className="py-4"
       id="clients"
+      dir="ltr"
     >
       {images.map((src, idx) => (
-        <img
+        <Image
           key={idx}
           src={src}
+          width={1000}
+          height={1000}
           alt={`Client logo ${idx + 1}`}
-          loading="lazy"
-          decoding="async"
           className={`mx-4 inline-block rounded-lg object-contain shadow-sm px-4 py-2 ${sizes[size]}`}
         />
       ))}
@@ -54,9 +55,11 @@ const ImageRow: React.FC<ImageRowProps> = ({
 
 // ✅ Main Component
 export const OurClients: React.FC<OurClientsProps> = ({ rowA, rowB }) => {
+  const t = useTranslations("Common");
+
   return (
     <section className="flex w-full flex-col items-center justify-center overflow-hidden space-y-[30px]">
-      <AnimatedHeading size="md" level={3} text="Our Clients" />
+      <AnimatedHeading size="md" level={3} text={t("ourClients")} />
 
       <ScrollVelocityContainer className="relative w-full bg-primary/90 py-4">
         <ImageRow images={rowA} direction={1} size="md" />

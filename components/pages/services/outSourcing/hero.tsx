@@ -4,15 +4,19 @@ import StyledBtn from "@/components/shared/buttons/styledBtn";
 import Section from "@/components/shared/layout/section";
 import AnimatedHeading from "@/components/shared/typography/animatedHeading";
 import Description from "@/components/shared/typography/description";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useTranslations } from "next-intl";
+import { GlobeSection } from "./globe";
+import { useRef } from "react";
 
 const Hero = () => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: false, margin: "-100px 0px" });
   const t = useTranslations("Outsourcing.hero");
   return (
     <Section
       type="outer"
-      className="flex items-center justify-center gap-[30px] flex-wrap xl:flex-nowrap min-h-screen py-[120px] text-center xl:text-start"
+      className="flex items-center justify-center  gap-[30px] flex-wrap xl:flex-nowrap min-h-screen py-[120px] text-center xl:text-start"
     >
       {/* Left text */}
       <div className="w-full space-y-[30px]">
@@ -47,6 +51,9 @@ const Hero = () => {
             />
           </div>
         </motion.div>
+      </div>
+      <div ref={ref} className="relative flex items-center justify-center">
+        {inView && <GlobeSection />}
       </div>
     </Section>
   );
