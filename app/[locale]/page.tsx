@@ -31,8 +31,9 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }) {
+  const { locale }: { locale: string } = await params;
   const t = await getTranslations({
-    locale: params.locale,
+    locale,
     namespace: "SEO.home",
   });
 

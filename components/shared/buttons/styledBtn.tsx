@@ -20,7 +20,11 @@ export default function StyledBtn({
 
   if (href) {
     return (
-      <Link href={href} className={`${baseStyles} ${className}`}>
+      <Link
+        aria-label={text}
+        href={href}
+        className={`${baseStyles} ${className}`}
+      >
         {text}
       </Link>
     );
