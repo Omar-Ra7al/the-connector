@@ -43,7 +43,7 @@ export default function Hero() {
             {/* Logo Text */}
             <div className="flex items-center">
               <BlurText
-                text="The Connector "
+                text={t("hero.logoText") + " "}
                 delay={150}
                 animateBy="words"
                 direction="bottom"
@@ -63,7 +63,7 @@ export default function Hero() {
 
             {/* Main Heading */}
             <BlurText
-              text="Your Partner in Software Engineering & Outsourcing."
+              text={t("hero.mainHeading")}
               delay={150}
               animateBy="words"
               direction="bottom"
@@ -77,8 +77,7 @@ export default function Hero() {
               size="lg"
               className="font-normal text-center max-w-[90%] lg:max-w-[70%] mx-auto"
             >
-              We build world-class digital products and provide top talent to
-              help your business grow and scale.
+              {t("hero.subtitle")}
             </Description>
           </FadeIn>
         </div>
@@ -91,11 +90,11 @@ export default function Hero() {
         >
           {/* Services Label */}
           <p className="text-sm uppercase tracking-[2px] text-gray-400 text-center">
-            Explore Our Services
+            {t("hero.servicesLabel")}
           </p>
 
           <TrueFocus
-            sentence="Software | Outsourcing"
+            sentence={t("hero.servicesText")}
             manualMode
             blurAmount={3}
             borderColor="var(--primary)"
@@ -105,7 +104,7 @@ export default function Hero() {
           />
 
           <FadeIn className="flex items-center" delay={2.8} duration={0.5}>
-            <ContactUsBtn text="Start Your Project Today" />
+            <ContactUsBtn text={t("hero.ctaButton")} />
           </FadeIn>
         </FadeIn>
       </Section>

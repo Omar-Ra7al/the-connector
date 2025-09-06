@@ -5,8 +5,10 @@ import Section from "@/components/shared/layout/section";
 import AnimatedHeading from "@/components/shared/typography/animatedHeading";
 import Description from "@/components/shared/typography/description";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations("Outsourcing.hero");
   return (
     <Section
       type="outer"
@@ -18,7 +20,7 @@ const Hero = () => {
           className="xl:justify-start"
           size="lg"
           level={1}
-          text="Scale Smarter with Outsourcing Excellence”"
+          text={t("heading")}
         />
         <motion.div
           initial={{ opacity: 0 }}
@@ -26,10 +28,7 @@ const Hero = () => {
           transition={{ delay: 1, duration: 0.6 }}
           className="xl:justify-start"
         >
-          <Description size="md">
-            Focus on your business, while we handle the tech, talent, and
-            delivery.
-          </Description>
+          <Description size="md">{t("description")}</Description>
         </motion.div>
 
         {/* Contact CTA */}
@@ -40,11 +39,11 @@ const Hero = () => {
           className="w-full"
         >
           <div className="flex flex-col items-center xl:items-start xl:flex-row itmes-center gap-4">
-            <ContactUsBtn text={`Get Started Today`} />
+            <ContactUsBtn text={t("ctaButtons.primary")} />
             <StyledBtn
               className="uppercase"
               href="#clients"
-              text={`See Our Clients`}
+              text={t("ctaButtons.secondary")}
             />
           </div>
         </motion.div>

@@ -5,11 +5,13 @@ import Description from "@/components/shared/typography/description";
 import Heading from "@/components/shared/typography/heading";
 import BlurText from "@/components/ui/BlurText";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export default function AboutSection() {
+  const t = useTranslations("Home.whyConnector");
   return (
     <Section type="inner" className="w-full">
-      <div className="mx-auto text-center">
+      <div id="why-the-connector" className="mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -19,7 +21,7 @@ export default function AboutSection() {
         >
           <Heading className="text-center" level={2} size="md">
             <BlurText
-              text="Why The Connector?"
+              text={t("heading")}
               animateBy="words"
               direction="bottom"
               className="text-center flex items-center justify-center"
@@ -35,23 +37,12 @@ export default function AboutSection() {
           className="lg:max-w-5xl mx-auto"
         >
           <Description size="md" className="mt-6 leading-relaxed font-normal">
-            We are <strong>The Connector</strong>, a company built on{" "}
-            <strong>trust, strategy, and execution</strong>. With a foundation
-            in global consulting, we now focus on two pillars:{" "}
-            <strong>Software Engineering</strong> and{" "}
-            <strong>Outsourcing</strong>.
-            <br />
-            <br />
-            Our strength lies in doing them exceptionally well—crafting{" "}
-            <strong>secure, future-ready digital solutions</strong> and{" "}
-            <strong>connecting businesses with the right talent</strong> at the
-            right time.
+            {t("description")}
           </Description>
         </motion.div>
 
         <h3 className="mt-8 text-2xl font-semibold text-primary">
-          Connecting Businesses to <strong>Software &amp; Talent</strong> That
-          Scale
+          {t("tagline")}
         </h3>
       </div>
     </Section>

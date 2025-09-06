@@ -4,6 +4,7 @@ import { mat4, quat, vec2, vec3 } from "gl-matrix";
 
 import { motion } from "framer-motion";
 import BlurText from "./BlurText";
+import { FaLocationArrow } from "react-icons/fa";
 const discVertShaderSource = `#version 300 es
 
 uniform mat4 uWorldMatrix;
@@ -1448,7 +1449,10 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({
             className="
           select-none
           absolute
-          text-[3rem]
+          text-xl
+          md:text-2xl
+          lg:text-4xl
+          font-bold
           bottom-28
           left-4
           text-white
@@ -1471,11 +1475,15 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({
             className="
           select-none
           absolute
-          text-[1.5rem]
-          bottom-4
+          text-justify
+          text-[12px]
+          md:text-lg
+          lg:text-xl
+          bottom-0
           left-4
           text-white/90
-          max-w-3xl
+          lg:max-w-2xl
+          max-w-[80%]
           drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]
         "
           >
@@ -1496,9 +1504,14 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({
           absolute
           left-1/2
           z-10
-          top-[calc(100%-150px)]
-          w-[60px]
-          h-[60px]
+          xl:top-[calc(100%-150px)]
+          top-4
+          md:top-8
+          lg:top-12
+          lg:w-[60px]
+          lg:h-[60px]
+          w-[40px]
+          h-[40px]
           grid
           place-items-center
           bg-primary
@@ -1509,13 +1522,14 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({
           cursor-pointer
           -translate-x-1/2
           hover:scale-110
-          hover:shadow-[0_0_20px_rgba(0,255,255,0.7)]
+          shadow-[0_0_10px_rgba(0,255,255,0.7)]
+          shadow-primary
           transition-transform
           duration-300
         "
           >
-            <p className="select-none relative text-[#060010] text-[26px] top-[2px]">
-              &#x2197;
+            <p className="select-none relative text-secondary text-lg lg:text-2xl top-[2px]">
+              <FaLocationArrow />
             </p>
           </motion.div>
         </>

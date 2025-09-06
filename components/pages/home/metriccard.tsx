@@ -28,6 +28,7 @@ export default function MetricCard({ title, text, color }: MetricCardProps) {
 
   return (
     <div
+      id="impact"
       className={`${
         color === "primary"
           ? "bg-primary text-secondary"

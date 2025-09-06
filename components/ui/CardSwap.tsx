@@ -1,11 +1,11 @@
 import React, {
   Children,
   cloneElement,
+  ComponentPropsWithRef,
   forwardRef,
   isValidElement,
   ReactElement,
   ReactNode,
-  RefObject,
   useEffect,
   useMemo,
   useRef,
@@ -34,15 +34,16 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
     <div
       ref={ref}
       {...rest}
-      className={`absolute top-1/2 left-1/2 -trnaslate-x-1/2 -translate-y-1/2 rounded-xl[transform-style:preserve-3d] [will-change:transform] [backface-visibility:hidden] ${
-        customClass ?? ""
-      } ${rest.className ?? ""}`.trim()}
+      className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
+        rounded-xl [transform-style:preserve-3d] [will-change:transform] 
+        [backface-visibility:hidden] ${customClass ?? ""} ${
+        rest.className ?? ""
+      }`.trim()}
     />
   )
 );
 Card.displayName = "Card";
 
-type CardRef = RefObject<HTMLDivElement>;
 interface Slot {
   x: number;
   y: number;
@@ -110,7 +111,9 @@ const CardSwap: React.FC<CardSwapProps> = ({
     () => Children.toArray(children) as ReactElement<CardProps>[],
     [children]
   );
-  const refs = useMemo<CardRef[]>(
+
+  // ✅ no custom type needed, directly create refs
+  const refs = useMemo(
     () => childArr.map(() => React.createRef<HTMLDivElement>()),
     [childArr.length]
   );
@@ -120,24 +123,29 @@ const CardSwap: React.FC<CardSwapProps> = ({
   );
 
   const tlRef = useRef<gsap.core.Timeline | null>(null);
-  const intervalRef = useRef<number>();
+  const intervalRef = useRef<number | null>(null);
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const total = refs.length;
-    refs.forEach((r, i) =>
-      placeNow(
-        r.current!,
-        makeSlot(i, cardDistance, verticalDistance, total),
-        skewAmount
-      )
-    );
+
+    refs.forEach((r, i) => {
+      if (r.current) {
+        placeNow(
+          r.current,
+          makeSlot(i, cardDistance, verticalDistance, total),
+          skewAmount
+        );
+      }
+    });
 
     const swap = () => {
       if (order.current.length < 2) return;
 
       const [front, ...rest] = order.current;
-      const elFront = refs[front].current!;
+      const elFront = refs[front].current;
+      if (!elFront) return;
+
       const tl = gsap.timeline();
       tlRef.current = tl;
 
@@ -149,7 +157,8 @@ const CardSwap: React.FC<CardSwapProps> = ({
 
       tl.addLabel("promote", `-=${config.durDrop * config.promoteOverlap}`);
       rest.forEach((idx, i) => {
-        const el = refs[idx].current!;
+        const el = refs[idx].current;
+        if (!el) return;
         const slot = makeSlot(i, cardDistance, verticalDistance, refs.length);
         tl.set(el, { zIndex: slot.zIndex }, "promote");
         tl.to(
@@ -199,38 +208,55 @@ const CardSwap: React.FC<CardSwapProps> = ({
     swap();
     intervalRef.current = window.setInterval(swap, delay);
 
-    if (pauseOnHover) {
-      const node = container.current!;
+    if (pauseOnHover && container.current) {
+      const node = container.current;
+
       const pause = () => {
         tlRef.current?.pause();
-        clearInterval(intervalRef.current);
+        if (intervalRef.current) clearInterval(intervalRef.current);
       };
+
       const resume = () => {
         tlRef.current?.play();
         intervalRef.current = window.setInterval(swap, delay);
       };
+
       node.addEventListener("mouseenter", pause);
       node.addEventListener("mouseleave", resume);
+
       return () => {
         node.removeEventListener("mouseenter", pause);
         node.removeEventListener("mouseleave", resume);
-        clearInterval(intervalRef.current);
+        if (intervalRef.current) clearInterval(intervalRef.current);
       };
     }
-    return () => clearInterval(intervalRef.current);
-  }, [cardDistance, verticalDistance, delay, pauseOnHover, skewAmount, easing]);
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [
+    cardDistance,
+    verticalDistance,
+    delay,
+    pauseOnHover,
+    skewAmount,
+    easing,
+    refs,
+  ]);
 
   const rendered = childArr.map((child, i) =>
     isValidElement<CardProps>(child)
       ? cloneElement(child, {
           key: i,
-          ref: refs[i],
-          style: { width, height, ...(child.props.style ?? {}) },
-          onClick: (e) => {
-            child.props.onClick?.(e as React.MouseEvent<HTMLDivElement>);
-            onCardClick?.(i);
-          },
-        } as CardProps & React.RefAttributes<HTMLDivElement>)
+          ...({
+            ref: refs[i],
+            style: { width, height, ...(child.props.style ?? {}) },
+            onClick: (e) => {
+              child.props.onClick?.(e as React.MouseEvent<HTMLDivElement>);
+              onCardClick?.(i);
+            },
+          } as ComponentPropsWithRef<"div">),
+        })
       : child
   );
 

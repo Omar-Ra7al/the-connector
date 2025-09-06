@@ -3,35 +3,30 @@ import Section from "@/components/shared/layout/section";
 import AnimatedHeading from "@/components/shared/typography/animatedHeading";
 import InfiniteMenu from "@/components/ui/InfiniteMenu";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const Portfolio = () => {
-  const items = [
-    {
-      image: "/clients/swt/websites/podMedia.png",
-      link: "https://podmedia.network/",
-      title: "PodMedia",
-      description:
-        "A leading podcast and media platform delivering high-quality audio and video content for creators and brands.",
-    },
-    {
-      image: "/clients/swt/websites/oneTake.png",
-      link: "https://www.onetake.ai/",
-      title: "OneTake",
-      description:
-        "Autonomous video editing platform that transforms raw footage into polished, shareable content instantly.",
-    },
-    {
-      image: "/clients/swt/websites/venttat.png",
-      link: "https://venttat.sa/en",
-      title: "Venttat",
-      description:
-        "Providing seamless and efficient public transportation solutions for a modern commuting experience.",
-    },
-  ];
+  const t = useTranslations("Software.portfolio");
+  const items = t.raw("projects").map((project: any, index: number) => ({
+    image:
+      index === 0
+        ? "/clients/swt/websites/podMedia.png"
+        : index === 1
+        ? "/clients/swt/websites/oneTake.png"
+        : "/clients/swt/websites/venttat.png",
+    link:
+      index === 0
+        ? "https://podmedia.network/"
+        : index === 1
+        ? "https://www.onetake.ai/"
+        : "https://venttat.sa/en",
+    title: project.title,
+    description: project.description,
+  }));
 
   return (
     <Section type="outer" className="spacey-y-[30px]">
-      <AnimatedHeading size="md" level={3} text="Some of Our Work" />
+      <AnimatedHeading size="md" level={3} text={t("heading")} />
       <div id="portfolio" className="w-full h-full rounded-2xl overflow-hidden">
         <InfiniteMenu
           items={items}

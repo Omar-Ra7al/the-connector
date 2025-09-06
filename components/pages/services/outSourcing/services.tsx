@@ -9,70 +9,64 @@ import GlassIcons from "@/components/ui/GlassIcons";
 // react-icons
 import { FiUsers, FiBriefcase, FiClock, FiTrendingUp } from "react-icons/fi";
 import ContactUsBtn from "@/components/shared/buttons/contactUsBtn";
-
-const services = [
-  {
-    icon: {
-      icon: <FiUsers />,
-      color: "primary",
-      label: "Talent",
-      sizePx: 50,
-    },
-    title: "Staff Augmentation",
-    description:
-      "Scale your team with top-tier developers, designers, and engineers. We provide skilled professionals on-demand, so you can stay agile and meet project goals faster.",
-    link: "/services/staff-augmentation",
-  },
-  {
-    icon: {
-      icon: <FiBriefcase />,
-      color: "primary",
-      label: "Outsourcing",
-      sizePx: 50,
-    },
-    title: "IT Outsourcing",
-    description:
-      "Focus on your business while we handle the tech. Our outsourcing solutions deliver cost-efficient, reliable, and scalable IT services tailored to your needs.",
-    link: "/services/outsourcing",
-  },
-  {
-    icon: {
-      icon: <FiClock />,
-      color: "primary",
-      label: "Flexibility",
-      sizePx: 50,
-    },
-    title: "Flexible Engagement",
-    description:
-      "From short-term tasks to long-term partnerships, we offer flexible engagement models that adapt to your business workflow.",
-    link: "/services/flexible-engagement",
-  },
-  {
-    icon: {
-      icon: <FiTrendingUp />,
-      color: "primary",
-      label: "Growth",
-      sizePx: 50,
-    },
-    title: "Dedicated Teams",
-    description:
-      "Build a dedicated offshore team fully aligned with your vision. We take care of recruitment, management, and delivery — you focus on growth.",
-    link: "/services/dedicated-teams",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function Services() {
+  const t = useTranslations("Outsourcing.services");
+
+  const services = [
+    {
+      icon: {
+        icon: <FiUsers />,
+        color: "primary",
+        label: "Talent",
+        sizePx: 50,
+      },
+      title: t.raw("services")[0].title,
+      description: t.raw("services")[0].description,
+      link: "/services/staff-augmentation",
+    },
+    {
+      icon: {
+        icon: <FiBriefcase />,
+        color: "primary",
+        label: "Outsourcing",
+        sizePx: 50,
+      },
+      title: t.raw("services")[1].title,
+      description: t.raw("services")[1].description,
+      link: "/services/outsourcing",
+    },
+    {
+      icon: {
+        icon: <FiClock />,
+        color: "primary",
+        label: "Flexibility",
+        sizePx: 50,
+      },
+      title: t.raw("services")[2].title,
+      description: t.raw("services")[2].description,
+      link: "/services/flexible-engagement",
+    },
+    {
+      icon: {
+        icon: <FiTrendingUp />,
+        color: "primary",
+        label: "Growth",
+        sizePx: 50,
+      },
+      title: t.raw("services")[3].title,
+      description: t.raw("services")[3].description,
+      link: "/services/dedicated-teams",
+    },
+  ];
   return (
     <Section
       type="outer"
       className="inner-section-container flex flex-col gap-6 md:gap-12 items-center"
     >
       {/* Section Heading */}
-      <AnimatedHeading
-        size="md"
-        level={3}
-        text="Outsourcing & Staff Augmentation"
-      />
+      <AnimatedHeading size="md" level={3} text={t("heading")} />
 
       {/* Services Cards */}
       <div className="grid md:grid-cols-2 gap-8 w-full">
@@ -109,7 +103,7 @@ export default function Services() {
           </SpotlightCard>
         ))}
       </div>
-      <ContactUsBtn text="Build Your Dream Team" />
+      <ContactUsBtn text={t("ctaButton")} />
     </Section>
   );
 }

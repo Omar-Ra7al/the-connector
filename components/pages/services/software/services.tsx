@@ -9,65 +9,63 @@ import GlassIcons from "@/components/ui/GlassIcons";
 // react-icons
 import { FiGlobe, FiSmartphone, FiShield, FiCpu } from "react-icons/fi";
 import ContactUsBtn from "@/components/shared/buttons/contactUsBtn";
-const services = [
-  {
-    icon: {
-      icon: <FiGlobe />,
-      color: "primary",
-      label: "Web",
-      sizePx: 50,
-    },
-    title: "Web Development",
-    description:
-      "We create fast, scalable, and visually stunning websites that turn visitors into customers and help your business grow online.",
-    link: "/services/web",
-  },
-  {
-    icon: {
-      icon: <FiSmartphone />,
-      color: "primary",
-      label: "Mobile",
-      sizePx: 50,
-    },
-    title: "Mobile App Development",
-    description:
-      "We build intuitive, high-performance apps for iOS and Android that engage users and keep them connected to your brand.",
-    link: "/services/mobile",
-  },
-  {
-    icon: {
-      icon: <FiShield />,
-      color: "primary",
-      label: "Security",
-      sizePx: 50,
-    },
-    title: "Cybersecurity",
-    description:
-      "Stay ahead of threats with our cutting-edge cybersecurity solutions, designed to protect your data, users, and business reputation.",
-    link: "/services/cybersecurity",
-  },
-  {
-    icon: {
-      icon: <FiCpu />,
-      color: "primary",
-      label: "AI",
-      sizePx: 50,
-    },
-    title: "Artificial Intelligence",
-    description:
-      "Harness the future with AI-powered automation and insights that drive smarter decisions and unlock new opportunities.",
-    link: "/services/ai",
-  },
-];
-
+import { useTranslations } from "next-intl";
 export default function Services() {
+  const t = useTranslations("Software.services");
+
+  const services = [
+    {
+      icon: {
+        icon: <FiGlobe />,
+        color: "primary",
+        label: "Web",
+        sizePx: 50,
+      },
+      title: t.raw("services")[0].title,
+      description: t.raw("services")[0].description,
+      link: "/services/web",
+    },
+    {
+      icon: {
+        icon: <FiSmartphone />,
+        color: "primary",
+        label: "Mobile",
+        sizePx: 50,
+      },
+      title: t.raw("services")[1].title,
+      description: t.raw("services")[1].description,
+      link: "/services/mobile",
+    },
+    {
+      icon: {
+        icon: <FiShield />,
+        color: "primary",
+        label: "Security",
+        sizePx: 50,
+      },
+      title: t.raw("services")[2].title,
+      description: t.raw("services")[2].description,
+      link: "/services/cybersecurity",
+    },
+    {
+      icon: {
+        icon: <FiCpu />,
+        color: "primary",
+        label: "AI",
+        sizePx: 50,
+      },
+      title: t.raw("services")[3].title,
+      description: t.raw("services")[3].description,
+      link: "/services/ai",
+    },
+  ];
   return (
     <Section
       type="outer"
       className="inner-section-container flex flex-col gap-6 md:gap-12 items-center"
     >
       {/* Section Heading */}
-      <AnimatedHeading size="md" level={3} text="What We Offer" />
+      <AnimatedHeading size="md" level={3} text={t("heading")} />
 
       {/* Services Cards */}
       <div className="grid md:grid-cols-2 gap-8 w-full">
@@ -104,7 +102,7 @@ export default function Services() {
           </SpotlightCard>
         ))}
       </div>
-      <ContactUsBtn text="Start Your Journey" />
+      <ContactUsBtn text={t("ctaButton")} />
     </Section>
   );
 }

@@ -10,6 +10,7 @@ import ContactUsBtn from "@/components/shared/buttons/contactUsBtn";
 import StyledBtn from "@/components/shared/buttons/styledBtn";
 import CardSwap, { Card } from "@/components/ui/CardSwap";
 import { ArrowBigRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const CARDS = [
   {
@@ -32,6 +33,7 @@ const CARDS = [
 const Hero = () => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, margin: "-100px 0px" });
+  const t = useTranslations("Software.hero");
 
   return (
     <Section
@@ -43,7 +45,7 @@ const Hero = () => {
         <AnimatedHeading
           size="lg"
           level={1}
-          text="Software Engineering That Powers Growth"
+          text={t("heading")}
           className="xl:justify-start"
         />
 
@@ -53,12 +55,7 @@ const Hero = () => {
           transition={{ delay: 1, duration: 0.6 }}
           className="xl:justify-start"
         >
-          <Description size="md">
-            We are The Connector, a company built on trust, strategy, and
-            execution. Our Software Engineering services craft secure,
-            future-ready digital solutions tailored to your business, helping
-            you scale efficiently and stay ahead in a competitive market.
-          </Description>
+          <Description size="md">{t("description")}</Description>
         </motion.div>
 
         {/* CTA buttons */}
@@ -68,10 +65,10 @@ const Hero = () => {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="flex flex-col xl:flex-row items-center xl:items-start gap-4 w-full"
         >
-          <ContactUsBtn text="Get In Touch With Us" />
+          <ContactUsBtn text={t("ctaButtons.primary")} />
           <StyledBtn
             href="#portfolio"
-            text="Explore Our Portfolio"
+            text={t("ctaButtons.secondary")}
             className="uppercase"
           />
         </motion.div>
@@ -82,7 +79,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className="relative w-full flex items-center xl:items-end justify-center min-h-[600px] h-full"
+        className="relative w-full flex items-start xl:items-end justify-center h-[200px] xl:min-h-[600px]"
         ref={ref}
       >
         {inView && (
@@ -115,7 +112,7 @@ const Hero = () => {
                     </h3>
                     <p className="text-sm animate-pulse lg:text-base text-white/80 flex items-center gap-2 mt-1">
                       <ArrowBigRight className="" />
-                      Visit Site
+                      {t("visitSite")}
                     </p>
                   </div>
                 </Link>
