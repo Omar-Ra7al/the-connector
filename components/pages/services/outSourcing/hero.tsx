@@ -1,3 +1,4 @@
+"use client";
 import ContactUsBtn from "@/components/shared/buttons/contactUsBtn";
 import StyledBtn from "@/components/shared/buttons/styledBtn";
 import Section from "@/components/shared/layout/section";
@@ -17,7 +18,7 @@ const Hero = () => {
           className="xl:justify-start"
           size="lg"
           level={1}
-          text="Software Engineering That Powers Growth"
+          text="Scale Smarter with Outsourcing Excellence”"
         />
         <motion.div
           initial={{ opacity: 0 }}
@@ -26,10 +27,8 @@ const Hero = () => {
           className="xl:justify-start"
         >
           <Description size="md">
-            We are The Connector, a company built on trust, strategy, and
-            execution. Our Software Engineering services craft secure,
-            future-ready digital solutions tailored to your business, helping
-            you scale efficiently and stay ahead in a competitive market.
+            Focus on your business, while we handle the tech, talent, and
+            delivery.
           </Description>
         </motion.div>
 
@@ -41,19 +40,11 @@ const Hero = () => {
           className="w-full"
         >
           <div className="flex flex-col items-center xl:items-start xl:flex-row itmes-center gap-4">
-            <ContactUsBtn text={`Get In Touch With Us`} />
+            <ContactUsBtn text={`Get Started Today`} />
             <StyledBtn
               className="uppercase"
-              onClick={() => {
-                const element = document.getElementById("portfolio"); // replace with your element id
-                if (element) {
-                  element.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start",
-                  });
-                }
-              }}
-              text={`Explore Our Portfolio`}
+              href="#clients"
+              text={`See Our Clients`}
             />
           </div>
         </motion.div>

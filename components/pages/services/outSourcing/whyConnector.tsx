@@ -2,7 +2,7 @@
 
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import Section from "@/components/shared/layout/section";
-import AnimatedHeading from "../shared/typography/animatedHeading";
+import AnimatedHeading from "@/components/shared/typography/animatedHeading";
 
 export default function WhyConnector() {
   return (

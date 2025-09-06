@@ -80,7 +80,7 @@ const Hero = () => {
       {/* Right cards */}
       <motion.div
         initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
         className="relative w-full flex items-center xl:items-end justify-center min-h-[600px] h-full"
         ref={ref}

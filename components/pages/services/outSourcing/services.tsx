@@ -7,56 +7,57 @@ import { BorderBeam } from "@/components/magicui/border-beam";
 import GlassIcons from "@/components/ui/GlassIcons";
 
 // react-icons
-import { FiGlobe, FiSmartphone, FiShield, FiCpu } from "react-icons/fi";
+import { FiUsers, FiBriefcase, FiClock, FiTrendingUp } from "react-icons/fi";
 import ContactUsBtn from "@/components/shared/buttons/contactUsBtn";
+
 const services = [
   {
     icon: {
-      icon: <FiGlobe />,
+      icon: <FiUsers />,
       color: "primary",
-      label: "Web",
+      label: "Talent",
       sizePx: 50,
     },
-    title: "Web Development",
+    title: "Staff Augmentation",
     description:
-      "We create fast, scalable, and visually stunning websites that turn visitors into customers and help your business grow online.",
-    link: "/services/web",
+      "Scale your team with top-tier developers, designers, and engineers. We provide skilled professionals on-demand, so you can stay agile and meet project goals faster.",
+    link: "/services/staff-augmentation",
   },
   {
     icon: {
-      icon: <FiSmartphone />,
+      icon: <FiBriefcase />,
       color: "primary",
-      label: "Mobile",
+      label: "Outsourcing",
       sizePx: 50,
     },
-    title: "Mobile App Development",
+    title: "IT Outsourcing",
     description:
-      "We build intuitive, high-performance apps for iOS and Android that engage users and keep them connected to your brand.",
-    link: "/services/mobile",
+      "Focus on your business while we handle the tech. Our outsourcing solutions deliver cost-efficient, reliable, and scalable IT services tailored to your needs.",
+    link: "/services/outsourcing",
   },
   {
     icon: {
-      icon: <FiShield />,
+      icon: <FiClock />,
       color: "primary",
-      label: "Security",
+      label: "Flexibility",
       sizePx: 50,
     },
-    title: "Cybersecurity",
+    title: "Flexible Engagement",
     description:
-      "Stay ahead of threats with our cutting-edge cybersecurity solutions, designed to protect your data, users, and business reputation.",
-    link: "/services/cybersecurity",
+      "From short-term tasks to long-term partnerships, we offer flexible engagement models that adapt to your business workflow.",
+    link: "/services/flexible-engagement",
   },
   {
     icon: {
-      icon: <FiCpu />,
+      icon: <FiTrendingUp />,
       color: "primary",
-      label: "AI",
+      label: "Growth",
       sizePx: 50,
     },
-    title: "Artificial Intelligence",
+    title: "Dedicated Teams",
     description:
-      "Harness the future with AI-powered automation and insights that drive smarter decisions and unlock new opportunities.",
-    link: "/services/ai",
+      "Build a dedicated offshore team fully aligned with your vision. We take care of recruitment, management, and delivery — you focus on growth.",
+    link: "/services/dedicated-teams",
   },
 ];
 
@@ -67,7 +68,11 @@ export default function Services() {
       className="inner-section-container flex flex-col gap-6 md:gap-12 items-center"
     >
       {/* Section Heading */}
-      <AnimatedHeading size="md" level={3} text="What We Offer" />
+      <AnimatedHeading
+        size="md"
+        level={3}
+        text="Outsourcing & Staff Augmentation"
+      />
 
       {/* Services Cards */}
       <div className="grid md:grid-cols-2 gap-8 w-full">
@@ -83,8 +88,8 @@ export default function Services() {
               colorFrom="#00beff"
               colorTo="#00beff"
               size={150}
-              duration={20} // slower, smoother
-              delay={index * 5} // staggered animation
+              duration={20}
+              delay={index * 5}
             />
             <div className="w-full flex items-center justify-center mb-4">
               {service.icon && <GlassIcons items={[service.icon]} />}
@@ -104,7 +109,7 @@ export default function Services() {
           </SpotlightCard>
         ))}
       </div>
-      <ContactUsBtn text="Start Your Journey" />
+      <ContactUsBtn text="Build Your Dream Team" />
     </Section>
   );
 }
