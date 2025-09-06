@@ -16,10 +16,10 @@ const Hero = () => {
   return (
     <Section
       type="outer"
-      className="flex items-center justify-center  gap-[30px] flex-wrap xl:flex-nowrap min-h-screen py-[120px] text-center xl:text-start"
+      className="flex items-center justify-center lg:justify-between gap-[30px] flex-wrap xl:flex-nowrap min-h-screen py-[120px] text-center xl:text-start"
     >
       {/* Left text */}
-      <div className="w-full space-y-[30px]">
+      <div className="w-full xl:max-w-[60%] space-y-[30px]">
         <AnimatedHeading
           className="xl:justify-start"
           size="lg"

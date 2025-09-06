@@ -5,41 +5,23 @@
       "mainHeading": "Your Partner in Software Engineering & Outsourcing.",
       "subtitle": "We build world-class digital products and provide top talent to help your business grow and scale.",
       "servicesLabel": "Explore Our Services",
-      "servicesText": "Software | Outsourcing",
+      "servicesText": "Software Engineering | Staff Augmentation",
       "ctaButton": "Start Your Project Today"
     },
     "whyConnector": {
       "heading": "Why The Connector?",
-      "description": "We are The Connector, a company built on trust, strategy, and execution. With a foundation in global consulting, we now focus on two pillars: Software Engineering and Outsourcing. Our strength lies in doing them exceptionally well—crafting secure, future-ready digital solutions and connecting businesses with the right talent at the right time.",
+      "description": "We are The Connector, a company built on trust, strategy, and execution. Our focus is on Software Engineering and Staff Augmentation & Outsourcing. We craft secure, future-ready digital solutions and connect businesses with the right talent to scale efficiently.",
       "tagline": "Connecting Businesses to Software & Talent That Scale"
     },
     "metrics": {
       "heading": "Our Impact in Numbers",
       "metrics": [
-        {
-          "value": "50+",
-          "label": "Trusted Clients Worldwide"
-        },
-        {
-          "value": "80+",
-          "label": "Successful Projects Delivered"
-        },
-        {
-          "value": "10+",
-          "label": "Countries We Operate In"
-        },
-        {
-          "value": "95%",
-          "label": "Client Retention Rate"
-        },
-        {
-          "value": "1000+",
-          "label": "Hours of Engineering"
-        },
-        {
-          "value": "24/7",
-          "label": "Dedicated Support"
-        }
+        { "value": "50+", "label": "Trusted Clients Worldwide" },
+        { "value": "80+", "label": "Successful Projects Delivered" },
+        { "value": "10+", "label": "Countries We Operate In" },
+        { "value": "95%", "label": "Client Retention Rate" },
+        { "value": "1000+", "label": "Hours of Engineering" },
+        { "value": "24/7", "label": "Dedicated Support" }
       ]
     },
     "services": {
@@ -47,12 +29,12 @@
       "services": [
         {
           "title": "Software Engineering",
-          "description": "At The Connector, we build secure, scalable, and future-ready digital solutions. From stunning websites to high-performance mobile apps, cutting-edge cybersecurity, and AI-driven insights, our software services help your business grow and stay ahead of the competition.",
+          "description": "We build secure, scalable, and future-ready digital solutions. From websites to mobile apps, cybersecurity, and AI-driven insights, our software services help your business grow and stay ahead of the competition.",
           "ctaText": "Read More"
         },
         {
-          "title": "Staff Augmentation",
-          "description": "Get the right experts at the exact moment your project needs them—no delays, no hassle. Our staff augmentation services give you access to skilled professionals who integrate seamlessly with your team, accelerating your projects without compromising quality or deadlines.",
+          "title": "Staff Augmentation & Outsourcing",
+          "description": "Connect with top-tier tech talent exactly when you need it. Our combined staff augmentation and outsourcing services provide skilled professionals who integrate seamlessly with your team and deliver full projects reliably, ensuring your business scales efficiently.",
           "ctaText": "Read More"
         }
       ]
@@ -71,10 +53,7 @@
     "form": {
       "header": "Fill in your details and our team will reach out to you shortly.",
       "fields": {
-        "fullName": {
-          "label": "Full Name",
-          "placeholder": "John Doe"
-        },
+        "fullName": { "label": "Full Name", "placeholder": "John Doe" },
         "email": {
           "label": "Business Email",
           "placeholder": "you@company.com"
@@ -84,28 +63,29 @@
           "placeholder": "-- Select a Service Type --",
           "options": {
             "software": "Software Engineering",
-            "outsource": "Outsourcing"
+            "staffOutsourcing": "Staff Augmentation & Outsourcing"
           }
         },
-        "company": {
-          "label": "Company",
-          "placeholder": "Company Name"
-        },
-        "phone": {
-          "label": "Phone Number",
-          "placeholder": "+20 123 456 7890"
-        },
-        "message": {
-          "label": "Your Message"
-        }
+        "company": { "label": "Company", "placeholder": "Company Name" },
+        "phone": { "label": "Phone Number", "placeholder": "+20 123 456 7890" },
+        "message": { "label": "Your Message" }
       },
       "submitButton": "Send Message"
-    }
+    },
+    "placeholders": [
+      "How can I quickly scale my tech team?",
+      "Can you build a mobile app for my business?",
+      "What's the difference between Staff Augmentation & Outsourcing?",
+      "How can cybersecurity protect my company's data?",
+      "What are the steps to building a dedicated dev team?",
+      "I want to automate my workflows using AI.",
+      "Do you offer solutions for startups?"
+    ]
   },
   "Software": {
     "hero": {
       "heading": "Software Engineering That Powers Growth",
-      "description": "We are The Connector, a company built on trust, strategy, and execution. Our Software Engineering services craft secure, future-ready digital solutions tailored to your business, helping you scale efficiently and stay ahead in a competitive market.",
+      "description": "Our Software Engineering services craft secure, future-ready digital solutions tailored to your business, helping you scale efficiently and stay ahead in a competitive market.",
       "ctaButtons": {
         "primary": "Get In Touch With Us",
         "secondary": "Explore Our Portfolio"
@@ -114,26 +94,26 @@
     },
     "whyConnector": {
       "heading": "Why Choose Us?",
-      "description": "We are The Connector, a company built on trust, strategy, and execution. Our clients choose us because we deliver secure, future-ready software and connect businesses with top talent at the right time. Every solution we create is tailored to drive growth, efficiency, and scalability."
+      "description": "Our clients choose us because we deliver secure, future-ready software and connect businesses with top talent at the right time. Every solution is tailored to drive growth, efficiency, and scalability."
     },
     "services": {
       "heading": "What We Offer",
       "services": [
         {
           "title": "Web Development",
-          "description": "We create fast, scalable, and visually stunning websites that turn visitors into customers and help your business grow online."
+          "description": "Fast, scalable, and visually stunning websites that convert visitors into customers."
         },
         {
           "title": "Mobile App Development",
-          "description": "We build intuitive, high-performance apps for iOS and Android that engage users and keep them connected to your brand."
+          "description": "Intuitive, high-performance apps for iOS and Android that engage users."
         },
         {
           "title": "Cybersecurity",
-          "description": "Stay ahead of threats with our cutting-edge cybersecurity solutions, designed to protect your data, users, and business reputation."
+          "description": "Cutting-edge cybersecurity solutions to protect your data, users, and reputation."
         },
         {
           "title": "Artificial Intelligence",
-          "description": "Harness the future with AI-powered automation and insights that drive smarter decisions and unlock new opportunities."
+          "description": "AI-powered automation and insights that drive smarter business decisions."
         }
       ],
       "ctaButton": "Start Your Journey"
@@ -143,23 +123,23 @@
       "projects": [
         {
           "title": "PodMedia",
-          "description": "A leading podcast and media platform delivering high-quality audio and video content for creators and brands."
+          "description": "A leading podcast and media platform delivering high-quality audio and video content."
         },
         {
           "title": "OneTake",
-          "description": "Autonomous video editing platform that transforms raw footage into polished, shareable content instantly."
+          "description": "Autonomous video editing platform that transforms raw footage into polished content instantly."
         },
         {
           "title": "Venttat",
-          "description": "Providing seamless and efficient public transportation solutions for a modern commuting experience."
+          "description": "Providing seamless and efficient public transportation solutions for modern commuting."
         }
       ]
     }
   },
   "Outsourcing": {
     "hero": {
-      "heading": "Scale Smarter with Outsourcing Excellence",
-      "description": "Focus on your business, while we handle the tech, talent, and delivery.",
+      "heading": "Scale Smarter with Staff Augmentation & Outsourcing",
+      "description": "Focus on your business while we handle the tech, talent, and delivery.",
       "ctaButtons": {
         "primary": "Get Started Today",
         "secondary": "See Our Clients"
@@ -167,32 +147,32 @@
     },
     "whyConnector": {
       "heading": "Why Choose Us?",
-      "description": "We are The Connector, a company built on trust, strategy, and execution. Our clients choose us because we deliver secure, future-ready software and connect businesses with top talent at the right time. Every solution we create is tailored to drive growth, efficiency, and scalability."
+      "description": "Our combined staff augmentation and outsourcing solutions ensure your business scales efficiently with the right talent and reliable delivery."
     },
     "services": {
-      "heading": "Outsourcing & Staff Augmentation",
+      "heading": "Staff Augmentation & Outsourcing Solutions",
       "services": [
         {
           "title": "Staff Augmentation",
-          "description": "Scale your team with top-tier developers, designers, and engineers. We provide skilled professionals on-demand, so you can stay agile and meet project goals faster."
+          "description": "Scale your team with top-tier developers, designers, and engineers who integrate seamlessly with your workflow."
         },
         {
           "title": "IT Outsourcing",
-          "description": "Focus on your business while we handle the tech. Our outsourcing solutions deliver cost-efficient, reliable, and scalable IT services tailored to your needs."
+          "description": "Delegate full projects or functions to our experts, ensuring cost-effective, high-quality, and scalable delivery."
         },
         {
           "title": "Flexible Engagement",
-          "description": "From short-term tasks to long-term partnerships, we offer flexible engagement models that adapt to your business workflow."
+          "description": "From short-term tasks to long-term partnerships, we offer engagement models that adapt to your business workflow."
         },
         {
           "title": "Dedicated Teams",
-          "description": "Build a dedicated offshore team fully aligned with your vision. We take care of recruitment, management, and delivery — you focus on growth."
+          "description": "Build an offshore team fully aligned with your vision. We handle recruitment, management, and delivery while you focus on growth."
         }
       ],
       "ctaButton": "Build Your Dream Team"
     },
     "stepper": {
-      "heading": "Simplifying Outsourcing Step by Step",
+      "heading": "Simplifying Staff Augmentation & Outsourcing Step by Step",
       "steps": [
         {
           "title": "Staff Augmentation",
@@ -204,25 +184,20 @@
         },
         {
           "title": "Scalable Solutions",
-          "description": "Scale your team up or down on demand without the hassle of recruitment or overhead costs."
+          "description": "Scale your team up or down on demand without recruitment or overhead hassles."
         },
         {
           "title": "Let's Get Started",
           "description": "Whether outsourcing a project or augmenting your staff, we've got you covered.",
-          "ctaButton": "Start Your Outsourcing Journey"
+          "ctaButton": "Start Your Journey"
         }
       ],
-      "navigation": {
-        "back": "Back",
-        "next": "Next"
-      }
+      "navigation": { "back": "Back", "next": "Next" }
     }
   },
   "Navigation": {
     "menu": {
-      "logo": {
-        "alt": "Company Logo"
-      },
+      "logo": { "alt": "Company Logo" },
       "home": {
         "label": "Home",
         "links": [
@@ -230,64 +205,36 @@
             "label": "Why The Connector",
             "ariaLabel": "Home Why The Connector"
           },
-          {
-            "label": "Impact",
-            "ariaLabel": "Home Impact"
-          },
-          {
-            "label": "Services",
-            "ariaLabel": "Home Services"
-          },
-          {
-            "label": "Clients",
-            "ariaLabel": "Clients"
-          }
+          { "label": "Impact", "ariaLabel": "Home Impact" },
+          { "label": "Services", "ariaLabel": "Home Services" },
+          { "label": "Clients", "ariaLabel": "Clients" }
         ]
       },
       "services": {
         "label": "Services",
         "links": [
+          { "label": "Software Engineering", "ariaLabel": "Services Software" },
           {
-            "label": "Software Engineering",
-            "ariaLabel": "Services Software"
-          },
-          {
-            "label": "Outsourcing",
-            "ariaLabel": "Services Outsourcing"
+            "label": "Staff Augmentation & Outsourcing",
+            "ariaLabel": "Services Staff & Outsourcing"
           }
         ]
       },
       "contact": {
         "label": "Contact",
-        "links": [
-          {
-            "label": "Get in Touch",
-            "ariaLabel": "Contact"
-          }
-        ]
+        "links": [{ "label": "Get in Touch", "ariaLabel": "Contact" }]
       }
     }
   },
   "Footer": {
-    "brand": {
-      "tagline1": "Creative Tech,",
-      "tagline2": "Limitless Vision."
-    },
+    "brand": { "tagline1": "Creative Tech,", "tagline2": "Limitless Vision." },
     "quickLinks": {
       "heading": "Quick Links",
       "links": [
-        {
-          "label": "Home"
-        },
-        {
-          "label": "Software Engineering"
-        },
-        {
-          "label": "OutSourcing"
-        },
-        {
-          "label": "Contact"
-        }
+        { "label": "Home" },
+        { "label": "Software Engineering" },
+        { "label": "Staff Augmentation & Outsourcing" },
+        { "label": "Contact" }
       ]
     },
     "connect": {
@@ -310,51 +257,52 @@
     "contactUs": "Contact Us",
     "ourClients": "Our Clients"
   },
+
   "SEO": {
     "home": {
-      "title": "The Connector - Software Engineering & Outsourcing Excellence",
-      "description": "Leading software engineering and outsourcing company. We build secure, future-ready digital solutions and connect businesses with top talent. Trust, strategy, and execution at scale.",
-      "keywords": "software engineering, outsourcing, digital solutions, software development, staff augmentation, IT outsourcing, web development, mobile apps, cybersecurity, AI solutions",
+      "title": "The Connector - Software Engineering & Staff Augmentation",
+      "description": "Leading software engineering and staff augmentation company. We build secure, future-ready digital solutions and connect businesses with top talent. Trust, strategy, and execution at scale.",
+      "keywords": "software engineering, staff augmentation, outsourcing, digital solutions, web development, mobile apps, cybersecurity, AI solutions",
       "ogTitle": "The Connector - Your Partner in Software Engineering & Outsourcing",
-      "ogDescription": "We build world-class digital products and provide top talent to help your business grow and scale. Secure, future-ready solutions tailored to your needs.",
-      "twitterTitle": "The Connector - Software Engineering & Outsourcing Excellence",
-      "twitterDescription": "Leading software engineering and outsourcing company. We build secure, future-ready digital solutions and connect businesses with top talent."
+      "ogDescription": "We build world-class digital products and provide top talent to help your business grow and scale.",
+      "twitterTitle": "The Connector - Software Engineering & Staff Augmentation",
+      "twitterDescription": "Leading software engineering and staff augmentation company. We build secure, future-ready digital solutions and connect businesses with top talent."
     },
     "contact": {
       "title": "Contact The Connector - Get In Touch Today",
-      "description": "Ready to start your project? Contact The Connector for software engineering and outsourcing services. We'd love to hear from you and discuss how we can help your business grow.",
-      "keywords": "contact, software engineering, outsourcing, consultation, project inquiry, business growth, digital transformation",
+      "description": "Ready to start your project? Contact The Connector for software engineering and staff augmentation services. We'd love to hear from you.",
+      "keywords": "contact, software engineering, staff augmentation, outsourcing, consultation, project inquiry, business growth, digital transformation",
       "ogTitle": "Contact The Connector - Start Your Project Today",
-      "ogDescription": "Ready to start your project? Contact The Connector for software engineering and outsourcing services. We'd love to hear from you.",
+      "ogDescription": "Ready to start your project? Contact The Connector for software engineering and staff augmentation services.",
       "twitterTitle": "Contact The Connector - Get In Touch Today",
-      "twitterDescription": "Ready to start your project? Contact The Connector for software engineering and outsourcing services."
+      "twitterDescription": "Ready to start your project? Contact The Connector for software engineering and staff augmentation services."
     },
     "software": {
       "title": "Software Engineering Services - The Connector",
       "description": "Professional software engineering services including web development, mobile apps, cybersecurity, and AI solutions. We craft secure, future-ready digital solutions that power business growth.",
-      "keywords": "software engineering, web development, mobile app development, cybersecurity, artificial intelligence, software solutions, digital transformation, custom software",
+      "keywords": "software engineering, web development, mobile app development, cybersecurity, AI solutions, digital transformation, custom software",
       "ogTitle": "Software Engineering Services - Secure, Future-Ready Solutions",
-      "ogDescription": "Professional software engineering services including web development, mobile apps, cybersecurity, and AI solutions. We craft secure, future-ready digital solutions.",
+      "ogDescription": "Professional software engineering services including web development, mobile apps, cybersecurity, and AI solutions.",
       "twitterTitle": "Software Engineering Services - The Connector",
       "twitterDescription": "Professional software engineering services including web development, mobile apps, cybersecurity, and AI solutions."
     },
     "outsourcing": {
-      "title": "IT Outsourcing & Staff Augmentation - The Connector",
-      "description": "Scale smarter with our outsourcing excellence. Staff augmentation, IT outsourcing, flexible engagement, and dedicated teams. Focus on your business while we handle the tech and talent.",
-      "keywords": "IT outsourcing, staff augmentation, dedicated teams, flexible engagement, offshore development, talent acquisition, business scaling, remote teams",
-      "ogTitle": "IT Outsourcing & Staff Augmentation - Scale Smarter",
-      "ogDescription": "Scale smarter with our outsourcing excellence. Staff augmentation, IT outsourcing, flexible engagement, and dedicated teams. Focus on your business while we handle the tech.",
-      "twitterTitle": "IT Outsourcing & Staff Augmentation - The Connector",
-      "twitterDescription": "Scale smarter with our outsourcing excellence. Staff augmentation, IT outsourcing, flexible engagement, and dedicated teams."
+      "title": "Staff Augmentation & IT Outsourcing - The Connector",
+      "description": "Scale smarter with our staff augmentation & outsourcing solutions. Flexible engagement, dedicated teams, and reliable delivery while you focus on business growth.",
+      "keywords": "staff augmentation, IT outsourcing, dedicated teams, flexible engagement, offshore development, talent acquisition, remote teams, business scaling",
+      "ogTitle": "Staff Augmentation & IT Outsourcing - Scale Smarter",
+      "ogDescription": "Scale smarter with our staff augmentation & outsourcing solutions. Flexible engagement, dedicated teams, and reliable delivery.",
+      "twitterTitle": "Staff Augmentation & IT Outsourcing - The Connector",
+      "twitterDescription": "Scale smarter with our staff augmentation & outsourcing solutions. Flexible engagement, dedicated teams, and reliable delivery."
     },
     "default": {
-      "title": "The Connector - Software Engineering & Outsourcing Excellence",
-      "description": "Leading software engineering and outsourcing company. We build secure, future-ready digital solutions and connect businesses with top talent. Trust, strategy, and execution at scale.",
-      "keywords": "software engineering, outsourcing, digital solutions, software development, staff augmentation, IT outsourcing",
+      "title": "The Connector - Software Engineering & Staff Augmentation",
+      "description": "Leading software engineering and staff augmentation company. We build secure, future-ready digital solutions and connect businesses with top talent.",
+      "keywords": "software engineering, staff augmentation, outsourcing, digital solutions, IT services",
       "ogTitle": "The Connector - Your Partner in Software Engineering & Outsourcing",
       "ogDescription": "We build world-class digital products and provide top talent to help your business grow and scale.",
-      "twitterTitle": "The Connector - Software Engineering & Outsourcing Excellence",
-      "twitterDescription": "Leading software engineering and outsourcing company. We build secure, future-ready digital solutions and connect businesses with top talent."
+      "twitterTitle": "The Connector - Software Engineering & Staff Augmentation",
+      "twitterDescription": "Leading software engineering and staff augmentation company. We build secure, future-ready digital solutions and connect businesses with top talent."
     }
   }
 }

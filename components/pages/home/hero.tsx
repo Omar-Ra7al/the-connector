@@ -86,7 +86,7 @@ export default function Hero() {
         <FadeIn
           delay={1.3}
           duration={0.3}
-          className="flex flex-col gap-[40px] items-center"
+          className="flex flex-col gap-[40px] items-center max-w-[90%]"
         >
           {/* Services Label */}
           <p className="text-sm uppercase tracking-[2px] text-gray-400 text-center">

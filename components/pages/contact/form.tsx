@@ -5,7 +5,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PlaceholdersAndVanish } from "./textArea"; // assuming textarea component
 import { CiLocationArrow1 } from "react-icons/ci";
-import Heading from "@/components/shared/typography/heading";
 import { useTranslations } from "next-intl";
 
 export function ContactForm() {
@@ -58,7 +57,7 @@ export function ContactForm() {
               {t("fields.service.options.software")}
             </option>
             <option value="outsource">
-              {t("fields.service.options.outsource")}
+              {t("fields.service.options.staffOutsourcing")}
             </option>
           </select>
         </LabelInputContainer>

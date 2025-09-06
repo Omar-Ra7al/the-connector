@@ -3,7 +3,6 @@ import Services from "@/components/pages/services/outSourcing/services";
 import OutsourcingStepper from "@/components/pages/services/outSourcing/stepper";
 import WhyConnector from "@/components/pages/services/outSourcing/whyConnector";
 import { OurClients } from "@/components/shared/sections/ourClients";
-import { generateSEOMetadata } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 
 const IMAGES_ROW_A = [

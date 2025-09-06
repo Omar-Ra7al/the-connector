@@ -23,8 +23,8 @@ const Footer = () => {
 
   const navLinks = [
     { label: t("quickLinks.links.0.label"), href: "/" },
-    { label: t("quickLinks.links.1.label"), href: "/software" },
-    { label: t("quickLinks.links.2.label"), href: "/outsourcing" },
+    { label: t("quickLinks.links.1.label"), href: "/services/software" },
+    { label: t("quickLinks.links.2.label"), href: "/services/outsourcing" },
     { label: t("quickLinks.links.3.label"), href: "/contact" },
   ];
 
