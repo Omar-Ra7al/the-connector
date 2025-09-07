@@ -24,9 +24,9 @@ const CARDS = [
     href: "https://one-take-iota.vercel.app/en",
   },
   {
-    src: "/clients/swt/websites/oneTake.png",
+    src: "/clients/swt/websites/PodEvents.png",
     alt: "One Take",
-    href: "https://one-take-iota.vercel.app/en",
+    href: "https://https://podevents.network/",
   },
 ];
 
@@ -79,7 +79,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className="relative w-full flex items-center md:items-start xl:items-end justify-center h-[200px] xl:min-h-[600px]"
+        className="relative w-full flex items-center md:items-end xl:items-end justify-center h-[200px] sm:h-[250px] md:h-[450px] xl:min-h-[600px]"
         ref={ref}
       >
         {inView && (
