@@ -50,7 +50,7 @@ export default function Services() {
               href={
                 index === 0 ? "/services/software" : "/services/outsourcing"
               }
-              text={`Read more about ${service.title}`}
+              text={`${service.ctaText} ${service.title}`}
             />
           </SpotlightCard>
         ))}

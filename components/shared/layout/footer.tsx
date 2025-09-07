@@ -163,7 +163,7 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <motion.div
-          className="mt-12 text-center text-sm text-muted-foreground"
+          className="my-12 text-center text-sm text-muted-foreground"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

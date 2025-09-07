@@ -10,6 +10,7 @@ import Image from "next/image";
 import FadeIn from "@/components/shared/sections/fadeIn";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
+import AnimatedHeading from "@/components/shared/typography/animatedHeading";
 
 export default function Hero() {
   const t = useTranslations("Home");
@@ -41,14 +42,9 @@ export default function Hero() {
           {/* Heading & Logo */}
           <div className="w-full flex flex-col justify-center items-center">
             {/* Logo Text */}
-            <div className="flex items-center">
-              <BlurText
-                text={t("hero.logoText") + " "}
-                animateBy="words"
-                direction="bottom"
-                className="text-[35px] md:text-[50px] lg:text-[64px] font-bold"
-              />
-              <FadeIn delay={0.5} duration={0.5}>
+            <div className="flex items-center gap-4">
+              <AnimatedHeading size="lg" level={1} text={t("hero.logoText")} />
+              <FadeIn delay={0.5} y={15} scale={0.9} duration={0.5}>
                 <Image
                   src="/logo.png"
                   alt="logo"
@@ -61,9 +57,10 @@ export default function Hero() {
             </div>
 
             {/* Main Heading */}
+
             <BlurText
               text={t("hero.mainHeading")}
-              delay={150}
+              delay={50}
               animateBy="words"
               direction="bottom"
               className="text-[35px] lg:text-[64px] font-semibold flex items-center justify-center"
@@ -71,7 +68,7 @@ export default function Hero() {
           </div>
 
           {/* Subtitle */}
-          <FadeIn delay={1.3} duration={1}>
+          <FadeIn delay={0.6} duration={1}>
             <Description
               size="lg"
               className="font-normal text-center max-w-[90%] lg:max-w-[70%] mx-auto"
@@ -83,7 +80,7 @@ export default function Hero() {
 
         {/* Bottom Section */}
         <FadeIn
-          delay={1.3}
+          delay={0.8}
           duration={0.3}
           className="flex flex-col gap-[40px] items-center max-w-[90%]"
         >
@@ -102,7 +99,13 @@ export default function Hero() {
             glowColor="rgba(255, 255, 0, 0.9)"
           />
 
-          <FadeIn className="flex items-center" delay={1.8} duration={0.5}>
+          <FadeIn
+            className="flex items-center"
+            y={0}
+            scale={0.9}
+            delay={1.2}
+            duration={0.5}
+          >
             <ContactUsBtn text={t("hero.ctaButton")} />
           </FadeIn>
         </FadeIn>
