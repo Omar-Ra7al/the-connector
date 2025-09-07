@@ -1428,19 +1428,19 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full min-h-[250px] overflow-hidden">
       <canvas
         id="infinite-grid-menu-canvas"
         ref={canvasRef}
-        className="cursor-grab w-full h-full overflow-hidden relative outline-none active:cursor-grabbing"
+        className="cursor-grab w-full h-full relative outline-none active:cursor-grabbing"
       />
 
       {activeItem && (
         <>
           {!isMoving && (
             <div
-              className="absolute bottom-0 left-0 w-full h-[80px] md:h-[120px] backdrop-blur-3xl lg:max-w-[45%]
-          max-w-[80%] bg-primary/10 overflow-hidden rounded-md py-2 px-4 md:px-6 flex flex-col items-start justify-center gap-2"
+              className="absolute bottom-0 left-0 w-full h-[60px] md:h-[120px] backdrop-blur-3xl lg:max-w-[45%]
+          max-w-[80%] bg-primary/10 overflow-hidden rounded-md py-1 px-4 md:px-6 flex flex-col items-start justify-center gap-[1px]"
             >
               {/* Animated Title */}
               <motion.h2
@@ -1452,7 +1452,7 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({
                 }}
                 transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }}
                 className="
-          text-xl
+          text-sm
           md:text-2xl
           lg:text-4xl
           font-bold
@@ -1477,8 +1477,6 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({
           md:text-lg
           lg:text-xl
           text-white/90
-          lg:max-w-2xl
-          max-w-[80%]
           line-clamp-2
         "
               >

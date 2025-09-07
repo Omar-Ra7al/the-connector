@@ -1,5 +1,11 @@
 import Image from "next/image";
-const Logo = () => {
+const Logo = ({
+  className,
+  priority = true,
+}: {
+  className?: string;
+  priority?: boolean;
+}) => {
   return (
     <div className="flex items-center justify-center ">
       <Image
@@ -7,7 +13,8 @@ const Logo = () => {
         alt="The Connector"
         width={100}
         height={100}
-        className="w-[40px] lg:w-[60px] object-contain"
+        priority={priority}
+        className={`w-[50px] lg:w-[60px] object-contain ${className}`}
       />
     </div>
   );

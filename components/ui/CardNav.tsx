@@ -7,6 +7,7 @@ import ContactUsBtn from "../shared/buttons/contactUsBtn";
 import LocaleSwitcher from "../shared/layout/localeSwitcher";
 import { BorderBeam } from "../magicui/border-beam";
 import Image from "next/image";
+import Logo from "../shared/layout/logo";
 
 type CardNavLink = {
   label: string;
@@ -209,13 +210,7 @@ const CardNav: React.FC<CardNavProps> = ({
             href="/"
             className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none"
           >
-            <Image
-              width={100}
-              height={100}
-              src={logo}
-              alt={logoAlt}
-              className="logo h-full w-[40px] lg:w-[60px]"
-            />
+            <Logo />
           </Link>
 
           <div

@@ -24,8 +24,8 @@ const CARDS = [
     href: "https://one-take-iota.vercel.app/en",
   },
   {
-    src: "/clients/swt/websites/PodEvents.png",
-    alt: "One Take",
+    src: "/clients/swt/websites/podEvents.png",
+    alt: "Pod Events",
     href: "https://https://podevents.network/",
   },
 ];

@@ -72,7 +72,7 @@ const Footer = () => {
               animate={{ scale: 1 }}
               transition={{ duration: 0.6 }}
             >
-              <Logo />
+              <Logo priority={false} />
             </motion.div>
             <div className="flex flex-col justify-center">
               <AnimatedHeading

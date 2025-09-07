@@ -11,6 +11,7 @@ import FadeIn from "@/components/shared/sections/fadeIn";
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import AnimatedHeading from "@/components/shared/typography/animatedHeading";
+import Logo from "@/components/shared/layout/logo";
 
 export default function Hero() {
   const t = useTranslations("Home");
@@ -42,17 +43,10 @@ export default function Hero() {
           {/* Heading & Logo */}
           <div className="w-full flex flex-col justify-center items-center">
             {/* Logo Text */}
-            <div className="flex items-center gap-4">
+            <div className="w-full flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4">
               <AnimatedHeading size="lg" level={1} text={t("hero.logoText")} />
               <FadeIn delay={0.5} y={15} scale={0.9} duration={0.5}>
-                <Image
-                  src="/logo.png"
-                  alt="logo"
-                  width={70}
-                  height={70}
-                  priority
-                  className="animate-pulse object-contain w-[50px] h-[50px] lg:w-[70px] lg:h-[70px]"
-                />
+                <Logo className="animate-pulse" />
               </FadeIn>
             </div>
 
