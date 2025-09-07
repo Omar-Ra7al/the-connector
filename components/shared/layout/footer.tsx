@@ -56,7 +56,7 @@ const Footer = () => {
   ];
   return (
     <footer className="relative mt-[120px] bg-gradient-to-t from-slate-900 via-slate-950 to-black text-white">
-      <Section type="inner" className="relative py-[70px] text-primary">
+      <Section type="inner" className="relative text-primary">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Logo & Brand */}
           <motion.div

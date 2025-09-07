@@ -44,7 +44,6 @@ export default function Hero() {
             <div className="flex items-center">
               <BlurText
                 text={t("hero.logoText") + " "}
-                delay={150}
                 animateBy="words"
                 direction="bottom"
                 className="text-[35px] md:text-[50px] lg:text-[64px] font-bold"

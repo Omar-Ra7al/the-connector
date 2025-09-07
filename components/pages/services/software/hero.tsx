@@ -38,7 +38,7 @@ const Hero = () => {
   return (
     <Section
       type="outer"
-      className="flex flex-wrap xl:flex-nowrap items-center justify-center gap-[30px] min-h-screen py-[120px] text-center xl:text-start"
+      className="flex flex-wrap xl:flex-nowrap items-center justify-center gap-30 md:gap-[60px] min-h-screen pt-[120px] text-center xl:text-start"
     >
       {/* Left text */}
       <div className="w-full space-y-[30px]">
@@ -79,7 +79,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className="relative w-full flex items-start xl:items-end justify-center h-[200px] xl:min-h-[600px]"
+        className="relative w-full flex items-center md:items-start xl:items-end justify-center h-[200px] xl:min-h-[600px]"
         ref={ref}
       >
         {inView && (

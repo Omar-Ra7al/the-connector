@@ -25,7 +25,7 @@ const Portfolio = () => {
   }));
 
   return (
-    <Section type="outer" className="spacey-y-[30px]">
+    <Section type="outer" className="space-y-[30px]">
       <AnimatedHeading size="md" level={3} text={t("heading")} />
       <div id="portfolio" className="w-full h-full rounded-2xl overflow-hidden">
         <InfiniteMenu

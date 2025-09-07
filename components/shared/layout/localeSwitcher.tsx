@@ -32,7 +32,7 @@ export default function LocaleSwitcher() {
       </motion.span>
 
       {/* Text */}
-      <span className="text-lg uppercase font-semibold text-primary">
+      <span className="text-md lg:text-lg uppercase font-semibold text-primary">
         {locale === "en" ? "Ar" : "En"}
       </span>
     </HoverBorderGradient>

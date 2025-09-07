@@ -44,13 +44,11 @@ export async function generateMetadata({
       title: t("ogTitle"),
       description: t("ogDescription"),
       type: "website",
-      images: [{ url: "/img/logo.png", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: t("twitterTitle"),
       description: t("twitterDescription"),
-      images: ["/img/logo.png"],
     },
   };
 }

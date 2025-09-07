@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/private/", "/admin/"],
     },
-    sitemap: "https://theconnector.co/sitemap.xml",
+    sitemap: "https://the-connector-three.vercel.app/sitemap.xml",
   };
 }

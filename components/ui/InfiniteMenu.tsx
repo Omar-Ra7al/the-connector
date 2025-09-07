@@ -1437,59 +1437,55 @@ const InfiniteMenu: FC<InfiniteMenuProps> = ({
 
       {activeItem && (
         <>
-          {/* Animated Title */}
-          <motion.h2
-            initial={{ opacity: 0, x: 50, filter: "blur(4px)" }}
-            animate={{
-              opacity: isMoving ? 0 : 1,
-              x: isMoving ? 50 : 0,
-              filter: isMoving ? "blur(4px)" : "blur(0px)",
-            }}
-            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }}
-            className="
-          select-none
-          absolute
+          {!isMoving && (
+            <div
+              className="absolute bottom-0 left-0 w-full h-[80px] md:h-[120px] backdrop-blur-3xl lg:max-w-[45%]
+          max-w-[80%] bg-primary/10 overflow-hidden rounded-md py-2 px-4 md:px-6 flex flex-col items-start justify-center gap-2"
+            >
+              {/* Animated Title */}
+              <motion.h2
+                initial={{ opacity: 0, x: 0, filter: "blur(4px)" }}
+                animate={{
+                  opacity: isMoving ? 0 : 1,
+                  x: isMoving ? 50 : -10,
+                  filter: isMoving ? "blur(4px)" : "blur(0px)",
+                }}
+                transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }}
+                className="
           text-xl
           md:text-2xl
           lg:text-4xl
           font-bold
-          bottom-28
-          left-4
           text-white
-          drop-shadow-[0_0_10px_rgba(0,255,255,0.7)]
         "
-          >
-            <BlurText text={activeItem.title} animateBy="letters" />
-            {/* {activeItem.title} */}
-          </motion.h2>
+              >
+                <BlurText text={activeItem.title} animateBy="words" />
+              </motion.h2>
 
-          {/* Animated Description */}
-          <motion.p
-            initial={{ opacity: 0, x: 60, filter: "blur(4px)" }}
-            animate={{
-              opacity: isMoving ? 0 : 1,
-              x: isMoving ? 60 : -10,
-              filter: isMoving ? "blur(4px)" : "blur(0px)",
-            }}
-            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }}
-            className="
+              {/* Animated Description */}
+              <motion.p
+                initial={{ opacity: 0, x: 60, filter: "blur(4px)" }}
+                animate={{
+                  opacity: isMoving ? 0 : 1,
+                  x: isMoving ? 60 : -10,
+                  filter: isMoving ? "blur(4px)" : "blur(0px)",
+                }}
+                transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1.0] }}
+                className="
           select-none
-          absolute
-          text-justify
           text-[12px]
           md:text-lg
           lg:text-xl
-          bottom-0
-          left-4
           text-white/90
           lg:max-w-2xl
           max-w-[80%]
-          drop-shadow-[0_0_8px_rgba(0,255,255,0.5)]
+          line-clamp-2
         "
-          >
-            {activeItem.description}
-          </motion.p>
-
+              >
+                {activeItem.description}
+              </motion.p>
+            </div>
+          )}
           {/* Animated Button */}
           <motion.div
             onClick={handleButtonClick}
